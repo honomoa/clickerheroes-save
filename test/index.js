@@ -14,7 +14,7 @@ test('works', function(t) {
   t.plan(5);
   var fix = path.resolve(__dirname, './fixture.txt');
   fs.readFile(fix, {encoding: 'ascii'}, function(error, data) {
-    var parsed = parse(data);
+    var parsed = parse(data.toString());
     t.ok(isPlainObject(parsed));
     t.equal(parsed.lastSkillUsed, 0);
     t.equal(parsed.primalSouls, 2);
