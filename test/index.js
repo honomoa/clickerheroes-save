@@ -22,3 +22,13 @@ test('works', function(t) {
     t.equal(parsed.currentZoneHeight, 123);
   });
 });
+
+test('throws on cheating', function(t) {
+  t.plan(1);
+  var fix = path.resolve(__dirname, './cheat.txt');
+  fs.readFile(fix, {encoding: 'ascii'}, function(error, data) {
+    t.throws(function() {
+      parse(data);
+    }, /Anti-cheat/);
+  });
+});

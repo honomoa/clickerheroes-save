@@ -18,6 +18,9 @@ function parse(save) {
       throw new Error('Bad hash');
     }
   }
+  else {
+    throw new Error('Anti-cheat code not found');
+  }
 
   var data = JSON.parse(decode(save));
   return data;
