@@ -9,7 +9,7 @@ function parse(save) {
     var result = save.split(ANTI_CHEAT_CODE);
     save = '';
     for (var i = 0; i < result[0].length; i += 2) {
-      save += result[0][i];
+      save += result[0].charAt(i);
     }
 
     var md5 = crypto.createHash('md5');
