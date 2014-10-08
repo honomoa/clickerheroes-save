@@ -28,7 +28,7 @@ test('throws on cheating', function(t) {
   var fix = path.resolve(__dirname, './cheat.txt');
   fs.readFile(fix, {encoding: 'ascii'}, function(error, data) {
     t.throws(function() {
-      parse(data);
+      parse(data.toString());
     }, /Anti-cheat/);
   });
 });
