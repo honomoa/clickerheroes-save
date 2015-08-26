@@ -25,7 +25,7 @@
   "devDependencies": {
     "graceful-fs": "^4.1.2",
     "lodash.isfunction": "^3.0.6",
-    "lodash.isplainobject": "^2.4.1",
+    "lodash.isplainobject": "^3.2.0",
     "tape": "^2.14.0"
   }
 }
