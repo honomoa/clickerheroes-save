@@ -23,6 +23,8 @@ fs.readFile(fix, {encoding: 'ascii'}, function(error, data) {
 
 ``` bash
 $ npm install clickerheroes-save
+or
+$ npm install honomoa/clickerheroes-save
 ```
 
 ## API
@@ -31,6 +33,10 @@ $ npm install clickerheroes-save
 var parse = require('clickerheroes-save');
 ```
 
-### `parse(save)`
+### `parse.decode(save)`
 
 Parse _String_ `save` as a ClickerHeroes save file.
+
+### `parse.encode(json)`
+
+Convert _JSON_ `json` to a ClickerHeroes save file.
